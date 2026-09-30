@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import confetti from 'canvas-confetti';
+import PropTypes from 'prop-types';
 import { wishesData } from './wishesData';
 import PetalsCanvas from './components/PetalsCanvas';
 
@@ -139,13 +140,13 @@ function SparkleIcon({ className = "w-4 h-4" }) {
 }
 
 const iconPropTypes = {
-  className: () => null
+  className: PropTypes.string
 };
 
 RingsIcon.propTypes = iconPropTypes;
 HeartIcon.propTypes = {
-  filled: () => null,
-  className: () => null
+  filled: PropTypes.bool,
+  className: PropTypes.string
 };
 SearchIcon.propTypes = iconPropTypes;
 CarouselIcon.propTypes = iconPropTypes;
