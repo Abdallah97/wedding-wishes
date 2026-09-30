@@ -43,6 +43,8 @@ jobs:
       - name: Setup Pages
         if: (vars.ENABLE_PAGES_DEPLOY == '' || vars.ENABLE_PAGES_DEPLOY == 'true') && github.event_name != 'pull_request' && (github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload GitHub Pages artifact
         if: (vars.ENABLE_PAGES_DEPLOY == '' || vars.ENABLE_PAGES_DEPLOY == 'true') && github.event_name != 'pull_request' && (github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
