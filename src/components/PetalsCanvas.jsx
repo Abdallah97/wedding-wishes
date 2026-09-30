@@ -25,7 +25,7 @@ export default function PetalsCanvas() {
       speedX: Math.random() * 0.8 - 0.4,
       speedY: Math.random() * 0.7 + 0.3,
       opacity: Math.random() * 0.5 + 0.25,
-      color: Math.random() > 0.4 ? '#C5A059' : '#D9CBBA',
+      color: Math.random() > 0.5 ? '#C59E50' : Math.random() > 0.3 ? '#D4C4B3' : '#E6DCCE',
       wobble: Math.random() * Math.PI * 2,
       wobbleSpeed: Math.random() * 0.02 + 0.01,
     }));
