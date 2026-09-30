@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import confetti from 'canvas-confetti';
+import PropTypes from 'prop-types';
 import { wishesData } from './wishesData';
 import PetalsCanvas from './components/PetalsCanvas';
 
@@ -137,6 +138,26 @@ function SparkleIcon({ className = "w-4 h-4" }) {
     </svg>
   );
 }
+
+const iconPropTypes = {
+  className: PropTypes.string
+};
+
+RingsIcon.propTypes = iconPropTypes;
+HeartIcon.propTypes = {
+  filled: PropTypes.bool,
+  className: PropTypes.string
+};
+SearchIcon.propTypes = iconPropTypes;
+CarouselIcon.propTypes = iconPropTypes;
+GridIcon.propTypes = iconPropTypes;
+PlayIcon.propTypes = iconPropTypes;
+PauseIcon.propTypes = iconPropTypes;
+CopyIcon.propTypes = iconPropTypes;
+CheckIcon.propTypes = iconPropTypes;
+ChevronRightIcon.propTypes = iconPropTypes;
+ChevronLeftIcon.propTypes = iconPropTypes;
+SparkleIcon.propTypes = iconPropTypes;
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
