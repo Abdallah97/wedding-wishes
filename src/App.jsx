@@ -138,6 +138,26 @@ function SparkleIcon({ className = "w-4 h-4" }) {
   );
 }
 
+const iconPropTypes = {
+  className: () => null
+};
+
+RingsIcon.propTypes = iconPropTypes;
+HeartIcon.propTypes = {
+  filled: () => null,
+  className: () => null
+};
+SearchIcon.propTypes = iconPropTypes;
+CarouselIcon.propTypes = iconPropTypes;
+GridIcon.propTypes = iconPropTypes;
+PlayIcon.propTypes = iconPropTypes;
+PauseIcon.propTypes = iconPropTypes;
+CopyIcon.propTypes = iconPropTypes;
+CheckIcon.propTypes = iconPropTypes;
+ChevronRightIcon.propTypes = iconPropTypes;
+ChevronLeftIcon.propTypes = iconPropTypes;
+SparkleIcon.propTypes = iconPropTypes;
+
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
